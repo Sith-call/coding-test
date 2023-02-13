@@ -73,19 +73,29 @@ def main():
 
     bfs()
 
+    # 이미 모든 토마토가 익은 경우
+    count = 0
+    for i in range(m):
+        for j in range(n):
+            if alist[j][i] == -1 or alist[j][i] == 1:
+                count += 1
+    if count == m*n:
+        print(0)
+        return
+
+    # 익지 않은 토마토가 있는 경우
     for i in range(m):
         for j in range(n):
             if visited[j][i] == 0 and alist[j][i] == 0:
                 print(-1)
                 return
 
+    # 시간이 걸려 토마토가 전부 익은 경우
     answer = 0
-
     for i in range(m):
         for j in range(n):
             if visited[j][i] > answer:
                 answer = visited[j][i]
-
     print(answer-1)
 
 if __name__ == "__main__":
