@@ -29,7 +29,7 @@ def dfs(start: int):
     global visited, alist # dfs는 함수를 몇 번 실행시킬 수 있는지를 기준으로 연결 요소를 센다
     if visited[start] == 1:
         return
-    visited[start] = 1
+    visited[start] = 1 # 한번만 체크해준다
     for node in alist[start]:
         if visited[node] == 1:
             continue
