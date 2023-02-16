@@ -1,4 +1,6 @@
 from queue import PriorityQueue
+import sys
+input = sys.stdin.readline
 
 def main():
     """
@@ -9,8 +11,9 @@ def main():
     x는 231보다 작은 자연수 또는 0이고, 음의 정수는 입력으로 주어지지 않는다.
     """
     n = int(input())
-    q = PriorityQueue(maxsize=10**5)
+    q = PriorityQueue()
     ops = []
+    
     for _ in range(n):
         ops.append(int(input()))
 
