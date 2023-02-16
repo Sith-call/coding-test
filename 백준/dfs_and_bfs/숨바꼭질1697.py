@@ -18,7 +18,6 @@ def bfs(start: int):
     global visited, k, q, max_value
     q = deque()
     q.append(start)
-    visited[start] = 1
 
     while len(q) != 0:
         x = q.popleft()
@@ -38,7 +37,7 @@ def main():
     """
     global visited, k, q, max_value
     n, k = map(int, input().split())
-    max_value = 10
+    max_value = 100000
     visited = [0] * (max_value + 1)
     answer = bfs(n)
     print(answer)
