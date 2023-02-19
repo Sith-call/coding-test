@@ -7,7 +7,7 @@ n: int
 m: int
 
 class Node:
-    def __init__(self,y,x,level=1):
+    def __init__(self, y, x, level=1):
         self.y = y
         self.x = x
         self.level = level
