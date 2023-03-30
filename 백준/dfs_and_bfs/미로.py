@@ -11,6 +11,7 @@ class Node:
         self.y = y
         self.x = x
         self.level = level
+    # 그래프 상의 노드에 두 개 이상의 데이터가 포함되는 경우 클래스로 따로 자료형을 만들어준다.
 
 
 def bfs(node : Node):
