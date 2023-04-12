@@ -2,16 +2,20 @@ from collections import deque
 
 alist : list
 visited : list
+n: int
 
-def dfs(start : int):
+def dfs(start : int, prev: int):
+    global n
     if visited[start] == 1:
+        print(prev)
         return
 
     visited[start] = 1
     print(start, end=" ")
 
     for node in alist[start]:
-        dfs(node)
+        dfs(node, start)
+
 
 def bfs(start : int):
     global alist, visited
@@ -36,7 +40,7 @@ def main():
     다음 M개의 줄에는 간선이 연결하는 두 정점의 번호가 주어진다. 어떤 두 정점 사이에 여러 개의 간선이 있을 수 있다. 
     입력으로 주어지는 간선은 양방향이다.
     """
-    global alist, visited
+    global alist, visited, n
     n, m, v = map(int, input().strip().split())
 
     alist = [[] for _ in range(n+1)]
@@ -52,7 +56,7 @@ def main():
 
     print(alist)
 
-    dfs(v)
+    dfs(v, v)
     visited = [0] * (n+1)
     print()
     bfs(v)
