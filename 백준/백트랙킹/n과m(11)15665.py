@@ -14,7 +14,6 @@ def backtracking(count):
         backtracking(count+1)
         answer.pop()
 
-    pass
 
 def main():
     global numbers, answer, n, m
