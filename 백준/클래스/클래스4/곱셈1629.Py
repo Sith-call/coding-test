@@ -57,6 +57,6 @@ def multi(a, n):
             return (tmp * tmp * a) % c
 
 
-print(multi(a, b))
+print(multi(a, b))::wqqw
 
 # 재귀함수를 이용한다.

@@ -9,7 +9,7 @@ def backtracking(count):
     if count == m:
         print(*answer)
         return
-    for i in range(1,n+1):
+    for i in range(1, n+1):
         if visited[i] == 0:
             visited[i] = 1
             answer.append(i)
